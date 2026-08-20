@@ -80,20 +80,16 @@ source .venv/bin/activate
 pip install -r requirements.txt
 ```
 
-### 4. Procesar la base final
+### 4. Procesar la base final (opcional)
 ```bash
 python src/analisis_bogota.py
 ```
+Este paso es opcional cuando usas `python main.py`, porque `main.py` verifica si `data/processed/df_final.csv` y `data/processed/modelo_arbolado.csv` ya existen y tienen estructura válida. Si faltan o están incompletos, ejecuta automáticamente el procesamiento antes de abrir la app.
 
 ### 5. Lanzar la aplicación principal
 Este repositorio tiene como entrada principal el archivo [main.py](main.py), que inicia el dashboard interactivo de Bogotá por UPL:
 ```bash
 python main.py
-```
-
-### 6. Ejecutar el dashboard directamente (alternativa)
-```bash
-streamlit run dashboard_interactivo.py
 ```
 
 ## Outputs principales
@@ -140,6 +136,11 @@ El proyecto entrega una base reproducible y una visualización interactiva final
 - estrato medio, proporción de estratos 1–2 y vulnerabilidad socioeconómica proxy,
 - tabla completa con código y nombre de cada UPL,
 - interpretación metodológica explícita.
+
+## Cumplimiento de lineamientos analíticos
+- Enfoque de ciudad: el problema se formula a escala distrital (Bogotá D.C.) y la UPL se usa como desagregación territorial para diagnóstico comparativo, no como intervención aislada.
+- Indicadores medibles y comparables en el tiempo: se emplean variables objetivas para 2023 y 2024 (temperatura media, PM2.5, población, densidad poblacional, estrato medio y proporción de estratos 1–2), manteniendo definiciones consistentes entre periodos.
+- Comparabilidad temporal: la estructura final de la tabla analítica preserva el mismo esquema de variables por año para facilitar seguimiento, monitoreo y análisis de tendencias.
 
 ## Nota metodológica
 La densidad de arbolado se estimó a partir de valores oficiales recuperados por `identify` sobre la capa institucional del Jardín Botánico de Bogotá, usando seis puntos candidatos dentro de cada UPL (centroide, punto representativo y vértices contenidos) y promediando únicamente los valores válidos devueltos por el servicio. La estratificación se resume mediante una media ponderada por el área de intersección entre manzanas y UPL. El modelo obtenido con los datos actuales tiene n=64 y R²=0.131: los coeficientes estandarizados son -0.246 para vulnerabilidad socioeconómica, -0.239 para PM2.5, 0.167 para temperatura y 0.383 para densidad poblacional. Estos resultados apoyan una lectura de asociación débil y exploratoria, no una conclusión causal.

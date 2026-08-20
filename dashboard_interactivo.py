@@ -17,6 +17,19 @@ VARIABLES = {
     "estrato_medio": "Estrato socioeconómico medio",
     "proporcion_estrato_1_2": "Proporción de estratos 1–2",
 }
+DISPLAY_LABELS = {
+    "upl": "UPL",
+    "nombre_upl": "Nombre UPL",
+    "anio": "Año",
+    "temperatura_media_c": "Temperatura media (°C)",
+    "pm25_media": "PM2.5 (µg/m³)",
+    "poblacion": "Población",
+    "densidad_poblacional": "Densidad poblacional (hab/km²)",
+    "densidad_arbolado_media": "Densidad de arbolado",
+    "estrato_medio": "Estrato socioeconómico medio",
+    "proporcion_estrato_1_2": "Proporción de estratos 1–2",
+    "vulnerabilidad_socioeconomica": "Vulnerabilidad socioeconómica",
+}
 COMMON_COLOR_SCALE = "RdYlBu_r"
 
 
@@ -118,6 +131,7 @@ fig = px.choropleth_mapbox(
         "proporcion_estrato_1_2": True,
         selected_var: True,
     },
+    labels=DISPLAY_LABELS,
     zoom=10,
     center={"lat": 4.711, "lon": -74.0721},
     mapbox_style="carto-positron",
@@ -156,11 +170,12 @@ with left_col:
 with right_col:
     st.subheader("Correlación de variables")
     corr = build_corr_table(filtered)
+    corr = corr.rename(index=DISPLAY_LABELS, columns=DISPLAY_LABELS)
     st.dataframe(corr, use_container_width=True)
 
 st.subheader("Datos completos por UPL")
 show_df = filtered[["upl", "nombre_upl", "anio", "temperatura_media_c", "pm25_media", "poblacion", "densidad_poblacional", "densidad_arbolado_media", "estrato_medio", "proporcion_estrato_1_2"]].sort_values("upl").reset_index(drop=True)
-show_df = show_df.rename(columns={"upl": "UPL", "nombre_upl": "Nombre UPL", "anio": "Año"})
+show_df = show_df.rename(columns=DISPLAY_LABELS)
 st.dataframe(show_df, use_container_width=True)
 
 st.subheader("Modelo descriptivo de densidad de arbolado")
