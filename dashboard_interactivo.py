@@ -33,8 +33,11 @@ def load_dashboard_data():
     df["upl"] = df["upl"].map(normalize_upl_code)
     df["anio"] = df["anio"].astype(int)
 
-    geo = upl[["CODIGO_UPL", "geometry"]].rename(columns={"CODIGO_UPL": "upl"})
+    geo = upl[["CODIGO_UPL", "NOMBRE", "geometry"]].rename(
+        columns={"CODIGO_UPL": "upl", "NOMBRE": "nombre_upl"}
+    )
     geo["upl"] = geo["upl"].map(normalize_upl_code)
+    geo["nombre_upl"] = geo["nombre_upl"].fillna(geo["upl"])
     map_df = geo.merge(df, on="upl", how="left")
     return map_df
 
@@ -93,9 +96,10 @@ fig = px.choropleth_mapbox(
     color=selected_var,
     color_continuous_scale=COMMON_COLOR_SCALE,
     range_color=(filtered[selected_var].min(), filtered[selected_var].max()),
-    hover_name="upl",
+    hover_name="nombre_upl",
     hover_data={
         "upl": True,
+        "nombre_upl": True,
         "anio": True,
         "temperatura_media_c": True,
         "pm25_media": True,
@@ -108,6 +112,18 @@ fig = px.choropleth_mapbox(
     mapbox_style="carto-positron",
     title=f"{VARIABLES[selected_var]} por UPL — {selected_year}",
     opacity=0.9,
+)
+
+label_points = filtered.copy()
+label_points["label_point"] = label_points.geometry.representative_point()
+fig.add_scattermapbox(
+    lat=label_points["label_point"].y,
+    lon=label_points["label_point"].x,
+    text=label_points["nombre_upl"],
+    mode="text",
+    textfont={"size": 10, "color": "#17324D"},
+    hoverinfo="skip",
+    showlegend=False,
 )
 
 fig.update_layout(margin={"r": 0, "t": 40, "l": 0, "b": 0}, height=700)
