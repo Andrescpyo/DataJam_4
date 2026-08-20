@@ -1,0 +1,21 @@
+{
+  "url": "https://mapas.ambientebogota.gov.co/server/rest/services/Calidad_aire",
+  "status_code": 200,
+  "headers": {
+    "Date": "Wed, 19 Aug 2026 16:44:37 GMT",
+    "Server": "Microsoft-IIS/10.0",
+    "Cache-Control": "must-revalidate,max-age=0,public",
+    "Content-Type": "text/html; charset=utf-8",
+    "Content-Encoding": "gzip",
+    "Vary": "Origin",
+    "Content-Security-Policy": "script-src 'self';",
+    "X-Content-Type-Options": "nosniff",
+    "X-XSS-Protection": "1; mode=block",
+    "X-Frame-Options": "SAMEORIGIN",
+    "Set-Cookie": "AGS_ROLES=sym-gcm|1|guT8bDwGX7WzJeOPhQOS7A==|1kN6IaecNuLQpUHAyyApkZXHUiXQozgCCfsNY9ij; Max-Age=60; Expires=Wed, 19 Aug 2026 16:45:37 GMT; Path=/server/rest; Secure; HttpOnly; SameSite=Lax",
+    "Keep-Alive": "timeout=5, max=100",
+    "Connection": "Keep-Alive",
+    "Transfer-Encoding": "chunked"
+  },
+  "saved": "data\\raw\\metadata\\https_mapas.ambientebogota.gov.co_server_rest_services_Calidad_aire.html"
+}

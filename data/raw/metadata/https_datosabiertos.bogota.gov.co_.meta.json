@@ -1,0 +1,12 @@
+{
+  "url": "https://datosabiertos.bogota.gov.co/",
+  "status_code": 200,
+  "headers": {
+    "Content-Type": "text/html; charset=utf-8",
+    "Content-Length": "56897",
+    "Cache-Control": "public, max-age=2592000, must-revalidate",
+    "Set-cookie": "ckan=1a6a7de6443574fd05c961ff6f6ed415559f82b9gAJ9cQAoWAcAAABfZG9tYWlucQFOWAUAAABfcGF0aHECWAEAAAAvcQNYAwAAAF9pZHEEWCAAAAAwMjhmZTY5OTExNmQ0Yjg4OTUxYjJlMzVmMjhiYTZhY3EFWAYAAABfZnJlc2hxBolYCwAAAF9jc3JmX3Rva2VucQdYKAAAADEyM2VhNGVjZTU1YmZmMTRkOGI3Zjc1ZGNmOGNjOTU3MDMzNWNiNGZxCFgOAAAAX2NyZWF0aW9uX3RpbWVxCUdB2qF3X/fIYVgOAAAAX2FjY2Vzc2VkX3RpbWVxCkdB2qF3X/fIZ3Uu; expires=Mon, 18-Jan-2038 22:14:07 GMT; HttpOnly; Path=/; SameSite=Lax, cookiesession1=678A3E672FB4E8CB7C4E6F544CF1F494;Expires=Thu, 19 Aug 2027 16:44:47 GMT;Path=/;HttpOnly",
+    "Strict-Transport-Security": "max-age=31536000; includeSubDomains"
+  },
+  "saved": "data\\raw\\metadata\\https_datosabiertos.bogota.gov.co_.html"
+}

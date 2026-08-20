@@ -1,0 +1,22 @@
+{
+  "url": "https://geoportal.jbb.gov.co/agc/rest/services/IDECA/densidadarboladourbano/MapServer",
+  "status_code": 200,
+  "headers": {
+    "Cache-Control": "must-revalidate,max-age=0,public",
+    "Transfer-Encoding": "chunked",
+    "Content-Type": "text/html; charset=utf-8",
+    "Content-Encoding": "gzip",
+    "Vary": "Origin",
+    "Server": "Microsoft-IIS/10.0",
+    "Content-Security-Policy": "script-src 'self';",
+    "X-Content-Type-Options": "nosniff",
+    "X-XSS-Protection": "1; mode=block",
+    "X-Frame-Options": "SAMEORIGIN",
+    "Set-Cookie": "AGS_ROLES=sym-gcm|1|lITQOgYNC2ZjV-GthYQ-aw==|hPDN8awKgfvX3P7b5xKEj8dhSkxY09XEooJMvR0m; Max-Age=60; Expires=Wed, 19 Aug 2026 16:45:37 GMT; Path=/agc/rest; Secure; HttpOnly; SameSite=Lax",
+    "X-Powered-By": "ASP.NET",
+    "Access-Control-Allow-Headers": "Content-Type, Accept, Authorization, X-Requested-With",
+    "Access-Control-Allow-Methods": "GET, POST, OPTIONS",
+    "Date": "Wed, 19 Aug 2026 16:44:37 GMT"
+  },
+  "saved": "data\\raw\\metadata\\https_geoportal.jbb.gov.co_agc_rest_services_IDECA_densidadarboladourbano_MapServer.html"
+}

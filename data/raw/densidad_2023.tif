@@ -1,0 +1,28 @@
+<html lang="en">
+<head>
+<title>
+Error: Invalid URL</title>
+<link href="/agc/rest/static/main.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<table width="100%" class="userTable">
+<tr>
+<td class="titlecell">ArcGIS REST Framework</td>
+</tr>
+</table>
+<table width="100%" class="navTable">
+<tr valign="top">
+<td class="breadcrumbs">
+<a href="/agc/rest/services">Home</a>
+</td>
+</tr>
+</table>
+<div class="cbody">
+<br/>
+<br/>
+<b>Error: </b>Invalid URL<br/>
+<b>Code: </b>400<br/><br/>
+<script type="text/javascript" src="/agc/rest/static/js/rest.js"></script>
+<div style="color:#ff6666"> </div></div>
+</body>
+</html>

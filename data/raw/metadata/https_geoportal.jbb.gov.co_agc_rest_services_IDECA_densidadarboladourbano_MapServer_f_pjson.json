@@ -1,0 +1,332 @@
+{
+  "currentVersion": 11.5,
+  "cimVersion": "3.5.0",
+  "serviceDescription": "Ráster de densidad del arbolado urbano de Bogotá D.C., que muestra la cantidad de árboles en un pixel de tamaño 100 metros x 100 metros, para los años 2018, 2019, 2020, 2021, 2022, 2023, 2024 y 2025.",
+  "mapName": "densidadarboladourbano",
+  "description": "Ráster de densidad del arbolado urbano de Bogotá D.C., que muestra la cantidad de árboles en un pixel de tamaño 100 metros x 100 metros, para los años 2018, 2019, 2020, 2021, 2022, 2023, 2024 y 2025.",
+  "copyrightText": "Jardín Botánico de Bogotá José Celestino Mutis",
+  "supportsDynamicLayers": true,
+  "layers": [
+    {
+      "id": 7,
+      "name": "densidadarbolado2025",
+      "parentLayerId": -1,
+      "defaultVisibility": true,
+      "subLayerIds": null,
+      "minScale": 0,
+      "maxScale": 0,
+      "type": "Raster Layer",
+      "supportsDynamicLegends": true
+    },
+    {
+      "id": 6,
+      "name": "densidadarbolado2024",
+      "parentLayerId": -1,
+      "defaultVisibility": true,
+      "subLayerIds": null,
+      "minScale": 15000000,
+      "maxScale": 0,
+      "type": "Raster Layer",
+      "supportsDynamicLegends": true
+    },
+    {
+      "id": 0,
+      "name": "densidadarbolado2023",
+      "parentLayerId": -1,
+      "defaultVisibility": true,
+      "subLayerIds": null,
+      "minScale": 15000000,
+      "maxScale": 0,
+      "type": "Raster Layer",
+      "supportsDynamicLegends": true
+    },
+    {
+      "id": 1,
+      "name": "densidadarbolado2022",
+      "parentLayerId": -1,
+      "defaultVisibility": true,
+      "subLayerIds": null,
+      "minScale": 15000000,
+      "maxScale": 0,
+      "type": "Raster Layer",
+      "supportsDynamicLegends": true
+    },
+    {
+      "id": 2,
+      "name": "densidadarbolado2021",
+      "parentLayerId": -1,
+      "defaultVisibility": true,
+      "subLayerIds": null,
+      "minScale": 15000000,
+      "maxScale": 0,
+      "type": "Raster Layer",
+      "supportsDynamicLegends": true
+    },
+    {
+      "id": 3,
+      "name": "densidadarbolado2020",
+      "parentLayerId": -1,
+      "defaultVisibility": true,
+      "subLayerIds": null,
+      "minScale": 15000000,
+      "maxScale": 0,
+      "type": "Raster Layer",
+      "supportsDynamicLegends": true
+    },
+    {
+      "id": 4,
+      "name": "densidadarbolado2019",
+      "parentLayerId": -1,
+      "defaultVisibility": true,
+      "subLayerIds": null,
+      "minScale": 15000000,
+      "maxScale": 0,
+      "type": "Raster Layer",
+      "supportsDynamicLegends": true
+    },
+    {
+      "id": 5,
+      "name": "densidadarbolado2018",
+      "parentLayerId": -1,
+      "defaultVisibility": true,
+      "subLayerIds": null,
+      "minScale": 15000000,
+      "maxScale": 0,
+      "type": "Raster Layer",
+      "supportsDynamicLegends": true
+    }
+  ],
+  "tables": [],
+  "spatialReference": {
+    "wkid": 4686,
+    "latestWkid": 4686,
+    "xyTolerance": 8.983152841195213e-09,
+    "zTolerance": 0.001,
+    "mTolerance": 0.001,
+    "falseX": -400,
+    "falseY": -400,
+    "xyUnits": 11258999068426.24,
+    "falseZ": -100000,
+    "zUnits": 10000,
+    "falseM": -100000,
+    "mUnits": 10000
+  },
+  "singleFusedMapCache": true,
+  "tileInfo": {
+    "rows": 256,
+    "cols": 256,
+    "dpi": 96,
+    "format": "Mixed",
+    "compressionQuality": 75,
+    "origin": {
+      "x": -179.99999999999983,
+      "y": 179.99999999999983
+    },
+    "spatialReference": {
+      "wkid": 4686,
+      "latestWkid": 4686,
+      "xyTolerance": 8.983152841195213e-09,
+      "zTolerance": 0.001,
+      "mTolerance": 0.001,
+      "falseX": -400,
+      "falseY": -400,
+      "xyUnits": 11258999068426.24,
+      "falseZ": -100000,
+      "zUnits": 10000,
+      "falseM": -100000,
+      "mUnits": 10000
+    },
+    "lods": [
+      {
+        "level": 0,
+        "resolution": 1.4062499999999987,
+        "scale": 591658710.9091305
+      },
+      {
+        "level": 1,
+        "resolution": 0.7031249999999993,
+        "scale": 295829355.4545652
+      },
+      {
+        "level": 2,
+        "resolution": 0.35156249999999967,
+        "scale": 147914677.7272826
+      },
+      {
+        "level": 3,
+        "resolution": 0.17578124999999983,
+        "scale": 73957338.8636413
+      },
+      {
+        "level": 4,
+        "resolution": 0.08789062499999992,
+        "scale": 36978669.43182065
+      },
+      {
+        "level": 5,
+        "resolution": 0.04394531249999996,
+        "scale": 18489334.715910327
+      },
+      {
+        "level": 6,
+        "resolution": 0.02197265624999998,
+        "scale": 9244667.357955163
+      },
+      {
+        "level": 7,
+        "resolution": 0.01098632812499999,
+        "scale": 4622333.678977582
+      },
+      {
+        "level": 8,
+        "resolution": 0.005493164062499995,
+        "scale": 2311166.839488791
+      },
+      {
+        "level": 9,
+        "resolution": 0.0027465820312499974,
+        "scale": 1155583.4197443954
+      },
+      {
+        "level": 10,
+        "resolution": 0.0013732910156249987,
+        "scale": 577791.7098721977
+      },
+      {
+        "level": 11,
+        "resolution": 0.0006866455078124993,
+        "scale": 288895.85493609885
+      },
+      {
+        "level": 12,
+        "resolution": 0.0003433227539062497,
+        "scale": 144447.92746804943
+      },
+      {
+        "level": 13,
+        "resolution": 0.00017166137695312484,
+        "scale": 72223.96373402471
+      },
+      {
+        "level": 14,
+        "resolution": 8.583068847656242e-05,
+        "scale": 36111.98186701236
+      },
+      {
+        "level": 15,
+        "resolution": 4.291534423828121e-05,
+        "scale": 18055.99093350618
+      },
+      {
+        "level": 16,
+        "resolution": 2.1457672119140605e-05,
+        "scale": 9027.99546675309
+      },
+      {
+        "level": 17,
+        "resolution": 1.0728836059570302e-05,
+        "scale": 4513.997733376545
+      },
+      {
+        "level": 18,
+        "resolution": 5.364418029785151e-06,
+        "scale": 2256.9988666882723
+      },
+      {
+        "level": 19,
+        "resolution": 2.6822090148925756e-06,
+        "scale": 1128.4994333441362
+      },
+      {
+        "level": 20,
+        "resolution": 1.3411045074462878e-06,
+        "scale": 564.2497166720681
+      },
+      {
+        "level": 21,
+        "resolution": 6.705522537231439e-07,
+        "scale": 282.12485833603404
+      },
+      {
+        "level": 22,
+        "resolution": 3.3527612686157195e-07,
+        "scale": 141.06242916801702
+      },
+      {
+        "level": 23,
+        "resolution": 1.6763806343078597e-07,
+        "scale": 70.53121458400851
+      }
+    ]
+  },
+  "storageInfo": {
+    "storageFormat": "esriMapCacheStorageModeCompactV2",
+    "packetSize": 128
+  },
+  "initialExtent": {
+    "xmin": -74.37733905006982,
+    "ymin": 4.414972488264942,
+    "xmax": -73.84263597542511,
+    "ymax": 4.864481781624532,
+    "spatialReference": {
+      "cs": "gcs",
+      "wkid": 4686
+    }
+  },
+  "fullExtent": {
+    "xmin": -74.45020908459539,
+    "ymin": 3.730970934739868,
+    "xmax": -73.98628855473824,
+    "ymax": 4.83661811193186,
+    "spatialReference": {
+      "cs": "gcs",
+      "wkid": 4686
+    }
+  },
+  "datesInUnknownTimezone": false,
+  "minScale": 18489334.715910327,
+  "maxScale": 18055.99093350618,
+  "minLOD": 5,
+  "maxLOD": 15,
+  "units": "esriDecimalDegrees",
+  "supportedImageFormatTypes": "PNG32,PNG24,PNG,JPG,DIB,TIFF,EMF,PS,PDF,GIF,SVG,SVGZ,BMP",
+  "documentInfo": {
+    "Title": "densidadarboladourbano",
+    "Author": "",
+    "Comments": "Ráster de densidad del arbolado urbano de Bogotá D.C., que muestra la cantidad de árboles en un pixel de tamaño 100 metros x 100 metros, para los años 2018, 2019, 2020, 2021, 2022, 2023, 2024 y 2025.",
+    "Subject": "Ráster de densidad de arbolado urbano para los años 2018, 2019, 2020, 2021, 2022, 2023, 2024 y 2025 en Bogotá D.C.",
+    "Category": "",
+    "Version": "3.5.0",
+    "AntialiasingMode": "Fast",
+    "TextAntialiasingMode": "Force",
+    "Keywords": "arbolado,urbano,Bogotá,ráster,densidad"
+  },
+  "supportsQueryDomains": true,
+  "capabilities": "Map,Query,Data",
+  "supportedQueryFormats": "JSON, geoJSON, PBF",
+  "exportTilesAllowed": false,
+  "referenceScale": 0.0,
+  "supportsDatumTransformation": true,
+  "floorAwareMapProperties": {
+    "defaultFloorFilterSettings": {
+      "isEnabled": false
+    }
+  },
+  "archivingInfo": {
+    "supportsHistoricMoment": false
+  },
+  "supportsClipping": true,
+  "supportsSpatialFilter": true,
+  "supportsTimeRelation": true,
+  "supportsQueryDataElements": true,
+  "mapUnits": {
+    "uwkid": 9102
+  },
+  "maxSelectionCount": 2000,
+  "maxRecordCount": 20000,
+  "maxImageHeight": 4096,
+  "maxImageWidth": 4096,
+  "supportedExtensions": "WMSServer",
+  "resampling": false,
+  "serviceItemId": "05d3b72bd17f40f0ac375354dabdc836"
+}

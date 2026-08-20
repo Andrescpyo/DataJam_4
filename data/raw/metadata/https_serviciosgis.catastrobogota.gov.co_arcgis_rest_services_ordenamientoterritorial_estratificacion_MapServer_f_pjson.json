@@ -1,0 +1,152 @@
+{
+  "currentVersion": 11.3,
+  "cimVersion": "3.3.0",
+  "serviceDescription": "<div style='text-align:Left;font-size:12pt'><div><div><p><span>Unidades geográficas tipo manzana a las cuales se les asocia la variable de estrato socioeconómico, siendo esta, la clasificación de los inmuebles residenciales que deben recibir servicios públicos. Se realiza principalmente para cobrar de manera diferencial por estratos los servicios públicos domiciliarios, permitiendo asignar subsidios y cobrar contribuciones.</span></p></div></div></div>",
+  "mapName": "Estratificación por manzana",
+  "description": "Unidades geográficas tipo manzana a las cuales se les asocia la variable de estrato socioeconómico, siendo esta, la clasificación de los inmuebles residenciales que deben recibir servicios públicos. Se realiza principalmente para cobrar de manera diferencial por estratos los servicios públicos domiciliarios, permitiendo asignar subsidios y cobrar contribuciones.",
+  "copyrightText": "Secretaría Distrital de Planeación - SDP",
+  "supportsDynamicLayers": true,
+  "layers": [
+    {
+      "id": 0,
+      "name": "Estratificacion",
+      "parentLayerId": -1,
+      "defaultVisibility": true,
+      "subLayerIds": [
+        1
+      ],
+      "minScale": 0,
+      "maxScale": 0,
+      "type": "Group Layer",
+      "supportsDynamicLegends": false
+    },
+    {
+      "id": 1,
+      "name": "Manzanas de estrato",
+      "parentLayerId": 0,
+      "defaultVisibility": true,
+      "subLayerIds": null,
+      "minScale": 1200000,
+      "maxScale": 500,
+      "type": "Feature Layer",
+      "geometryType": "esriGeometryPolygon",
+      "supportsDynamicLegends": true
+    }
+  ],
+  "tables": [],
+  "spatialReference": {
+    "wkt2": "PROJCRS[\"PCS_CarMAGBOG\",BASEGEOGCRS[\"GCS_CarMAGBOG\",DATUM[\"CGS_CarMAGBOG\",ELLIPSOID[\"GRS80 Mod\",6380687.0,298.257222101,LENGTHUNIT[\"Meter\",1.0]]],PRIMEM[\"Greenwich\",0.0,ANGLEUNIT[\"Degree\",0.0174532925199433]],CS[ellipsoidal,2],ANGLEUNIT[\"Degree\",0.0174532925199433]],CONVERSION[\"Transverse_Mercator\",METHOD[\"Transverse_Mercator\"],PARAMETER[\"False_Easting\",92334.879,LENGTHUNIT[\"Meter\",1.0]],PARAMETER[\"False_Northing\",109320.965,LENGTHUNIT[\"Meter\",1.0]],PARAMETER[\"Central_Meridian\",-74.14659167,ANGLEUNIT[\"Degree\",0.0174532925199433]],PARAMETER[\"Scale_Factor\",1.0,SCALEUNIT[\"Unity\",1.0]],PARAMETER[\"Latitude_Of_Origin\",4.680486111,ANGLEUNIT[\"Degree\",0.0174532925199433]]],CS[Cartesian,2],AXIS[\"Easting (X)\",east,ORDER[1]],AXIS[\"Northing (Y)\",north,ORDER[2]],LENGTHUNIT[\"Meter\",1.0]]",
+    "wkt": "PROJCS[\"PCS_CarMAGBOG\",GEOGCS[\"GCS_CarMAGBOG\",DATUM[\"CGS_CarMAGBOG\",SPHEROID[\"GRS80 Mod\",6380687.0,298.257222101]],PRIMEM[\"Greenwich\",0.0],UNIT[\"Degree\",0.0174532925199433]],PROJECTION[\"Transverse_Mercator\"],PARAMETER[\"False_Easting\",92334.879],PARAMETER[\"False_Northing\",109320.965],PARAMETER[\"Central_Meridian\",-74.14659167],PARAMETER[\"Scale_Factor\",1.0],PARAMETER[\"Latitude_Of_Origin\",4.680486111],UNIT[\"Meter\",1.0]]",
+    "xyTolerance": 0.001,
+    "zTolerance": 0.001,
+    "mTolerance": 0.001,
+    "falseX": -5533100,
+    "falseY": -10414600,
+    "xyUnits": 10000,
+    "falseZ": -100000,
+    "zUnits": 10000,
+    "falseM": -100000,
+    "mUnits": 10000
+  },
+  "singleFusedMapCache": false,
+  "initialExtent": {
+    "xmin": 74472.03743555551,
+    "ymin": 90618.96838280998,
+    "xmax": 117250.95994165263,
+    "ymax": 122718.50420876234,
+    "spatialReference": {
+      "wkt2": "PROJCRS[\"PCS_CarMAGBOG\",BASEGEOGCRS[\"GCS_CarMAGBOG\",DATUM[\"CGS_CarMAGBOG\",ELLIPSOID[\"GRS80 Mod\",6380687.0,298.257222101,LENGTHUNIT[\"Meter\",1.0]]],PRIMEM[\"Greenwich\",0.0,ANGLEUNIT[\"Degree\",0.0174532925199433]],CS[ellipsoidal,2],ANGLEUNIT[\"Degree\",0.0174532925199433]],CONVERSION[\"Transverse_Mercator\",METHOD[\"Transverse_Mercator\"],PARAMETER[\"False_Easting\",92334.879,LENGTHUNIT[\"Meter\",1.0]],PARAMETER[\"False_Northing\",109320.965,LENGTHUNIT[\"Meter\",1.0]],PARAMETER[\"Central_Meridian\",-74.14659167,ANGLEUNIT[\"Degree\",0.0174532925199433]],PARAMETER[\"Scale_Factor\",1.0,SCALEUNIT[\"Unity\",1.0]],PARAMETER[\"Latitude_Of_Origin\",4.680486111,ANGLEUNIT[\"Degree\",0.0174532925199433]]],CS[Cartesian,2],AXIS[\"Easting (X)\",east,ORDER[1]],AXIS[\"Northing (Y)\",north,ORDER[2]],LENGTHUNIT[\"Meter\",1.0]]",
+      "wkt": "PROJCS[\"PCS_CarMAGBOG\",GEOGCS[\"GCS_CarMAGBOG\",DATUM[\"CGS_CarMAGBOG\",SPHEROID[\"GRS80 Mod\",6380687.0,298.257222101]],PRIMEM[\"Greenwich\",0.0],UNIT[\"Degree\",0.0174532925199433]],PROJECTION[\"Transverse_Mercator\"],PARAMETER[\"False_Easting\",92334.879],PARAMETER[\"False_Northing\",109320.965],PARAMETER[\"Central_Meridian\",-74.14659167],PARAMETER[\"Scale_Factor\",1.0],PARAMETER[\"Latitude_Of_Origin\",4.680486111],UNIT[\"Meter\",1.0]]",
+      "xyTolerance": 0.001,
+      "zTolerance": 0.001,
+      "mTolerance": 0.001,
+      "falseX": -5533100,
+      "falseY": -10414600,
+      "xyUnits": 10000,
+      "falseZ": -100000,
+      "zUnits": 10000,
+      "falseM": -100000,
+      "mUnits": 10000
+    }
+  },
+  "fullExtent": {
+    "xmin": 83809.96655840828,
+    "ymin": 85631.93812749737,
+    "xmax": 107888.81282122369,
+    "ymax": 126186.5897814839,
+    "spatialReference": {
+      "wkt2": "PROJCRS[\"PCS_CarMAGBOG\",BASEGEOGCRS[\"GCS_CarMAGBOG\",DATUM[\"CGS_CarMAGBOG\",ELLIPSOID[\"GRS80 Mod\",6380687.0,298.257222101,LENGTHUNIT[\"Meter\",1.0]]],PRIMEM[\"Greenwich\",0.0,ANGLEUNIT[\"Degree\",0.0174532925199433]],CS[ellipsoidal,2],ANGLEUNIT[\"Degree\",0.0174532925199433]],CONVERSION[\"Transverse_Mercator\",METHOD[\"Transverse_Mercator\"],PARAMETER[\"False_Easting\",92334.879,LENGTHUNIT[\"Meter\",1.0]],PARAMETER[\"False_Northing\",109320.965,LENGTHUNIT[\"Meter\",1.0]],PARAMETER[\"Central_Meridian\",-74.14659167,ANGLEUNIT[\"Degree\",0.0174532925199433]],PARAMETER[\"Scale_Factor\",1.0,SCALEUNIT[\"Unity\",1.0]],PARAMETER[\"Latitude_Of_Origin\",4.680486111,ANGLEUNIT[\"Degree\",0.0174532925199433]]],CS[Cartesian,2],AXIS[\"Easting (X)\",east,ORDER[1]],AXIS[\"Northing (Y)\",north,ORDER[2]],LENGTHUNIT[\"Meter\",1.0]]",
+      "wkt": "PROJCS[\"PCS_CarMAGBOG\",GEOGCS[\"GCS_CarMAGBOG\",DATUM[\"CGS_CarMAGBOG\",SPHEROID[\"GRS80 Mod\",6380687.0,298.257222101]],PRIMEM[\"Greenwich\",0.0],UNIT[\"Degree\",0.0174532925199433]],PROJECTION[\"Transverse_Mercator\"],PARAMETER[\"False_Easting\",92334.879],PARAMETER[\"False_Northing\",109320.965],PARAMETER[\"Central_Meridian\",-74.14659167],PARAMETER[\"Scale_Factor\",1.0],PARAMETER[\"Latitude_Of_Origin\",4.680486111],UNIT[\"Meter\",1.0]]",
+      "xyTolerance": 0.001,
+      "zTolerance": 0.001,
+      "mTolerance": 0.001,
+      "falseX": -5533100,
+      "falseY": -10414600,
+      "xyUnits": 10000,
+      "falseZ": -100000,
+      "zUnits": 10000,
+      "falseM": -100000,
+      "mUnits": 10000
+    }
+  },
+  "datesInUnknownTimezone": false,
+  "minScale": 1200000,
+  "maxScale": 500,
+  "units": "esriMeters",
+  "supportedImageFormatTypes": "PNG32,PNG24,PNG,JPG,DIB,TIFF,EMF,PS,PDF,GIF,SVG,SVGZ,BMP",
+  "documentInfo": {
+    "Title": "Estratificación por manzana",
+    "Author": "",
+    "Comments": "Unidades geográficas tipo manzana a las cuales se les asocia la variable de estrato socioeconómico, siendo esta, la clasificación de los inmuebles residenciales que deben recibir servicios públicos. Se realiza principalmente para cobrar de manera diferencial por estratos los servicios públicos domiciliarios, permitiendo asignar subsidios y cobrar contribuciones.",
+    "Subject": "Servicio web geográfico que contiene la estratificación por manzana",
+    "Category": "",
+    "Version": "3.3.0",
+    "AntialiasingMode": "None",
+    "TextAntialiasingMode": "Force",
+    "Keywords": "Estratificación,manzana,estrato socioeconómico,servicios públicos"
+  },
+  "supportsQueryDomains": true,
+  "capabilities": "Map,Query,Data",
+  "supportedQueryFormats": "JSON, geoJSON, PBF",
+  "exportTilesAllowed": false,
+  "referenceScale": 0.0,
+  "datumTransformations": [
+    {
+      "geoTransforms": [
+        {
+          "wkid": 108001,
+          "latestWkid": 1241,
+          "transformForward": true,
+          "name": "NAD_1927_To_NAD_1983_NADCON"
+        }
+      ]
+    },
+    {
+      "geoTransforms": [
+        {
+          "wkid": 108001,
+          "latestWkid": 1241,
+          "transformForward": false,
+          "name": "NAD_1927_To_NAD_1983_NADCON"
+        }
+      ]
+    }
+  ],
+  "supportsDatumTransformation": true,
+  "archivingInfo": {
+    "supportsHistoricMoment": false
+  },
+  "supportsClipping": true,
+  "supportsSpatialFilter": true,
+  "supportsTimeRelation": true,
+  "supportsQueryDataElements": true,
+  "mapUnits": {
+    "uwkid": 9001
+  },
+  "maxRecordCount": 2000,
+  "maxImageHeight": 4096,
+  "maxImageWidth": 4096,
+  "supportedExtensions": "WFSServer, WMSServer",
+  "resampling": false,
+  "serviceItemId": "3e26c023b331454daaba9e2b8f034ebb"
+}

@@ -1,0 +1,70 @@
+{
+  "currentVersion": 11.5,
+  "folders": [],
+  "services": [
+    {
+      "name": "Calidad_aire/Estacion_calidad_aire",
+      "type": "MapServer"
+    },
+    {
+      "name": "Calidad_aire/Ozono_Promedio_Anual_2022",
+      "type": "MapServer"
+    },
+    {
+      "name": "Calidad_aire/Ozono_Promedio_Anual_2024",
+      "type": "MapServer"
+    },
+    {
+      "name": "Calidad_aire/Ozono_promedio_trimestral",
+      "type": "MapServer"
+    },
+    {
+      "name": "Calidad_aire/PM10_Promedio_Anual_2024",
+      "type": "MapServer"
+    },
+    {
+      "name": "Calidad_aire/PM10_Promedio_anual",
+      "type": "MapServer"
+    },
+    {
+      "name": "Calidad_aire/PM25_Promedio_Anual_2023",
+      "type": "MapServer"
+    },
+    {
+      "name": "Calidad_aire/PM25_Promedio_Anual_2024",
+      "type": "MapServer"
+    },
+    {
+      "name": "Calidad_aire/Precipitacion_Anual_Acumulada_2023",
+      "type": "MapServer"
+    },
+    {
+      "name": "Calidad_aire/Precipitacion_Anual_Acumulada_2024",
+      "type": "MapServer"
+    },
+    {
+      "name": "Calidad_aire/Temperatura_Anual_Promedio_2023",
+      "type": "MapServer"
+    },
+    {
+      "name": "Calidad_aire/Temperatura_Anual_Promedio_2024",
+      "type": "MapServer"
+    },
+    {
+      "name": "Calidad_aire/Temperatura_mensual_promedio",
+      "type": "MapServer"
+    },
+    {
+      "name": "Calidad_aire/Velocidad_Viento_0_23h_Anual_2023",
+      "type": "MapServer"
+    },
+    {
+      "name": "Calidad_aire/Velocidad_Viento_0_23h_Anual_2024",
+      "type": "MapServer"
+    },
+    {
+      "name": "Calidad_aire/Velocidad_viento_trimestral",
+      "type": "MapServer"
+    }
+  ]
+}

@@ -1,0 +1,205 @@
+{
+  "help": "https://datosabiertos.bogota.gov.co/api/3/action/help_show?name=package_show",
+  "success": true,
+  "result": {
+    "creator_user_id": "fd37bc20-62e3-4bdf-810d-ac7285fc1067",
+    "date_types": "Última actualización",
+    "dis_organization": "Secretaría Distrital de Salud",
+    "dis_scope": "Conjunto de datos",
+    "id": "85bf790d-84d1-4eda-bd6f-40af62e71d95",
+    "ideca_languages": "Espanol",
+    "idnt_add_resource": [
+      "https://saludata.saludcapital.gov.co/osb/"
+    ],
+    "idnt_spatial_resolution": "",
+    "inf_citation_date": "2026-05-04",
+    "inf_metadata_resp": "Secretaría Distrital de Salud",
+    "inf_metadata_scope": "Conjunto de datos",
+    "isopen": true,
+    "license_id": "CC-BY-4.0",
+    "license_title": "Creative Commons Attribution 4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0/",
+    "maintainer": "Jose  Medina",
+    "maintainer_email": "jdmedina@saludcapital.gov.co",
+    "metadata_created": "2019-09-23T13:13:55.933294",
+    "metadata_modified": "2026-05-04T12:46:30.153393",
+    "name": "piramide-poblacional-bogota-d-c",
+    "notes": "Describe la distribución anual de la población según sexo, edad y localidad de residencia para la ciudad de Bogotá D.C.",
+    "num_resources": 3,
+    "num_tags": 5,
+    "organization": {
+      "id": "dc229bca-fced-47ab-9158-45c8a30c6367",
+      "name": "sds",
+      "title": "Secretaría Distrital de Salud",
+      "type": "organization",
+      "description": "",
+      "image_url": "2019-04-04-231411.597994secretariasalud.png",
+      "created": "2017-10-02T18:25:32.166410",
+      "is_organization": true,
+      "approval_status": "approved",
+      "state": "active"
+    },
+    "owner_org": "dc229bca-fced-47ab-9158-45c8a30c6367",
+    "presentation_types": "Tabla Digital",
+    "private": false,
+    "qua_summary": "El conjunto de datos cumple con los estándares de calidad de acuerdo al Observatorio de Salud de Bogotá D.C.",
+    "ref_systems": "Sin sistema de referencia",
+    "responsable_types": "Autor",
+    "spatial": "{\"type\":\"Polygon\",\"coordinates\":[[[-74.267032,4.514065],[-74.267032,4.828575],[-73.969597,4.828575],[-73.969597,4.514065],[-74.267032,4.514065]]]}",
+    "spatial_types": "Sin representación espacial",
+    "state": "active",
+    "title": "Población en Bogotá D.C. 2005-2035",
+    "topic_main_categories": "Salud",
+    "type": "dataset",
+    "update_frequencies": "Anual",
+    "groups": [
+      {
+        "description": "",
+        "display_name": "Salud y Protección Social",
+        "id": "d8c5e68f-2816-4e33-9b38-e684771b920d",
+        "image_display_url": "https://datosabiertos.bogota.gov.co/uploads/group/2018-12-24-002634.258056salud.png",
+        "name": "salud-proteccion-social",
+        "title": "Salud y Protección Social"
+      }
+    ],
+    "resources": [
+      {
+        "cache_last_updated": null,
+        "cache_url": null,
+        "ckan_url": "https://datosabiertos.bogota.gov.co",
+        "created": "2026-05-02T18:52:29.253686",
+        "datastore_active": true,
+        "datastore_contains_all_records_of_source_file": true,
+        "description": "Población en Bogotá D.C por Localidad. 2005-2035",
+        "format": "CSV",
+        "hash": "e593f572e748b00cf0ee3829ca4e0067",
+        "id": "37e58cb3-c870-4608-8c37-ce45db0eb7c1",
+        "ignore_hash": false,
+        "last_modified": "2026-05-02T18:52:29.145255",
+        "metadata_modified": "2026-05-02T18:54:20.291364",
+        "mimetype": "text/csv",
+        "mimetype_inner": null,
+        "name": "Población en Bogotá D.C por Localidad. 2005-2035",
+        "original_url": "https://datosabiertos.bogota.gov.co/dataset/85bf790d-84d1-4eda-bd6f-40af62e71d95/resource/37e58cb3-c870-4608-8c37-ce45db0eb7c1/download/osb_demografia-poblacion-localidad.csv",
+        "package_id": "85bf790d-84d1-4eda-bd6f-40af62e71d95",
+        "position": 0,
+        "resource_id": "37e58cb3-c870-4608-8c37-ce45db0eb7c1",
+        "resource_type": null,
+        "set_url_type": false,
+        "size": 6818607,
+        "state": "active",
+        "task_created": "2026-05-02 18:52:29.805925",
+        "url": "https://datosabiertos.bogota.gov.co/dataset/85bf790d-84d1-4eda-bd6f-40af62e71d95/resource/37e58cb3-c870-4608-8c37-ce45db0eb7c1/download/osb_demografia-poblacion-localidad.csv",
+        "url_type": "upload",
+        "tracking_summary": {
+          "total": 126,
+          "recent": 23
+        }
+      },
+      {
+        "cache_last_updated": null,
+        "cache_url": null,
+        "created": "2019-09-23T13:15:54.211636",
+        "datastore_active": true,
+        "datastore_contains_all_records_of_source_file": false,
+        "description": "Describe la distribución anual de la población según sexo, edad y UPL de residencia para la ciudad de Bogotá D.C. por Localidad.",
+        "format": "CSV",
+        "hash": "fadb9cdc31c2a9703cda276222358647",
+        "id": "d1743cda-9ff9-4103-87ab-9c038f2f09a3",
+        "last_modified": "2026-05-01T12:46:23.374470",
+        "metadata_modified": "2026-05-01T12:49:30.555892",
+        "mimetype": "text/csv",
+        "mimetype_inner": null,
+        "name": "Población en Bogotá D.C por UPL. 2005-2035",
+        "package_id": "85bf790d-84d1-4eda-bd6f-40af62e71d95",
+        "position": 1,
+        "resource_type": null,
+        "size": 9795506,
+        "state": "active",
+        "url": "https://datosabiertos.bogota.gov.co/dataset/85bf790d-84d1-4eda-bd6f-40af62e71d95/resource/d1743cda-9ff9-4103-87ab-9c038f2f09a3/download/osb_demografia-poblacion-upl.csv",
+        "url_type": "upload",
+        "tracking_summary": {
+          "total": 44,
+          "recent": 4
+        }
+      },
+      {
+        "cache_last_updated": null,
+        "cache_url": null,
+        "ckan_url": "https://datosabiertos.bogota.gov.co",
+        "created": "2021-05-25T14:52:41.694885",
+        "datastore_active": true,
+        "datastore_contains_all_records_of_source_file": true,
+        "description": "Metadato Piramide Poblacional  Bogotá",
+        "format": "CSV",
+        "hash": "4a12eff2a472f4595333736035786031",
+        "id": "f61fd267-18a9-4ae7-9832-2b7acca3b3fe",
+        "ignore_hash": false,
+        "last_modified": "2026-05-01T12:47:14.377088",
+        "metadata_modified": "2026-05-01T12:49:35.687997",
+        "mimetype": "text/csv",
+        "mimetype_inner": null,
+        "name": "Metadato Piramide Poblacional  Bogotá",
+        "original_url": "https://datosabiertos.bogota.gov.co/dataset/85bf790d-84d1-4eda-bd6f-40af62e71d95/resource/f61fd267-18a9-4ae7-9832-2b7acca3b3fe/download/metadato-osb_demografia-poblacion.csv",
+        "package_id": "85bf790d-84d1-4eda-bd6f-40af62e71d95",
+        "position": 2,
+        "resource_id": "f61fd267-18a9-4ae7-9832-2b7acca3b3fe",
+        "resource_type": null,
+        "set_url_type": false,
+        "size": 927,
+        "state": "active",
+        "task_created": "2026-05-01 12:47:14.609945",
+        "url": "https://datosabiertos.bogota.gov.co/dataset/85bf790d-84d1-4eda-bd6f-40af62e71d95/resource/f61fd267-18a9-4ae7-9832-2b7acca3b3fe/download/metadato-osb_demografia-poblacion.csv",
+        "url_type": "upload",
+        "tracking_summary": {
+          "total": 296,
+          "recent": 5
+        }
+      }
+    ],
+    "tags": [
+      {
+        "display_name": "Salud Bogotá",
+        "id": "8216c660-2731-4146-b13c-d9b7930fa72a",
+        "name": "Salud Bogotá",
+        "state": "active",
+        "vocabulary_id": null
+      },
+      {
+        "display_name": "Salud y Protección Social",
+        "id": "f10dfa86-8701-47e0-afd3-f9d4bb140618",
+        "name": "Salud y Protección Social",
+        "state": "active",
+        "vocabulary_id": null
+      },
+      {
+        "display_name": "Secretaria de Salud",
+        "id": "45dfca69-b1b8-4110-b1ee-97daf087eea1",
+        "name": "Secretaria de Salud",
+        "state": "active",
+        "vocabulary_id": null
+      },
+      {
+        "display_name": "salud",
+        "id": "6d446823-f81e-45b6-a17b-4d1f9d2b6d5c",
+        "name": "salud",
+        "state": "active",
+        "vocabulary_id": null
+      },
+      {
+        "display_name": "salud bogota",
+        "id": "5abbb403-c3cb-4bc2-bb10-698aac988983",
+        "name": "salud bogota",
+        "state": "active",
+        "vocabulary_id": null
+      }
+    ],
+    "relationships_as_subject": [],
+    "relationships_as_object": [],
+    "tracking_summary": {
+      "total": 13937,
+      "recent": 71,
+      "downloads": 466
+    }
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "url": "https://datosabiertos.bogota.gov.co/api/3/action/package_show?id=piramide-poblacional-bogota-d-c",
+  "status_code": 200,
+  "headers": {
+    "Content-Type": "application/json;charset=utf-8",
+    "Content-Length": "7183",
+    "Cache-Control": "public, max-age=2592000, must-revalidate",
+    "Set-cookie": "ckan=cc25228eb38aafb239d69114829118815b789bafgAJ9cQAoWAcAAABfZG9tYWlucQFOWAUAAABfcGF0aHECWAEAAAAvcQNYAwAAAF9pZHEEWCAAAAAwNDk5NTAyNDE2NzU0NTk0YTUwMzhkZWE0ODljOTJmMHEFWAYAAABfZnJlc2hxBolYDgAAAF9jcmVhdGlvbl90aW1lcQdHQdqhd4McLZ5YDgAAAF9hY2Nlc3NlZF90aW1lcQhHQdqhd4McLaJ1Lg==; expires=Mon, 18-Jan-2038 22:14:07 GMT; HttpOnly; Path=/; SameSite=Lax, cookiesession1=678A3E67C0FBD533A46F98619AD1028B;Expires=Thu, 19 Aug 2027 16:47:08 GMT;Path=/;HttpOnly",
+    "Strict-Transport-Security": "max-age=31536000; includeSubDomains"
+  },
+  "saved": "data\\raw\\metadata\\https_datosabiertos.bogota.gov.co_api_3_action_package_show_id_piramide-poblacional-bogota-d-c.json"
+}

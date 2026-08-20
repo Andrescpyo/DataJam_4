@@ -1,0 +1,12 @@
+{
+  "url": "https://datosabiertos.bogota.gov.co/api/3/action/package_search?q=Unidad%20de%20Planeamiento",
+  "status_code": 200,
+  "headers": {
+    "Content-Type": "application/json;charset=utf-8",
+    "Content-Length": "101297",
+    "Cache-Control": "public, max-age=2592000, must-revalidate",
+    "Set-cookie": "ckan=1f9c348c8c342e605cb6e4272f745ecac0d75ea5gAJ9cQAoWAcAAABfZG9tYWlucQFOWAUAAABfcGF0aHECWAEAAAAvcQNYAwAAAF9pZHEEWCAAAAA4YTQxNzM0NTE3YTQ0YTFhYTM0ZTJiOTQ4ZDRkNzg3MHEFWAYAAABfZnJlc2hxBolYDgAAAF9jcmVhdGlvbl90aW1lcQdHQdqhd4Pi9PlYDgAAAF9hY2Nlc3NlZF90aW1lcQhHQdqhd4Pi9P11Lg==; expires=Mon, 18-Jan-2038 22:14:07 GMT; HttpOnly; Path=/; SameSite=Lax, cookiesession1=678A3E679A236A74DF8B61D9DBB93CE8;Expires=Thu, 19 Aug 2027 16:47:11 GMT;Path=/;HttpOnly",
+    "Strict-Transport-Security": "max-age=31536000; includeSubDomains"
+  },
+  "saved": "data\\raw\\metadata\\https_datosabiertos.bogota.gov.co_api_3_action_package_search_q_Unidad_20de_20Planeamiento.json"
+}

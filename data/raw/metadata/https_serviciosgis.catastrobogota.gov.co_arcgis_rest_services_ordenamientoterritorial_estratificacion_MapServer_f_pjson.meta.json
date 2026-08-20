@@ -1,0 +1,17 @@
+{
+  "url": "https://serviciosgis.catastrobogota.gov.co/arcgis/rest/services/ordenamientoterritorial/estratificacion/MapServer?f=pjson",
+  "status_code": 200,
+  "headers": {
+    "Cache-Control": "must-revalidate,max-age=0,public",
+    "Content-Type": "text/plain; charset=UTF-8",
+    "Content-Encoding": "gzip",
+    "ETag": "\"97e12107\"",
+    "Vary": "Origin",
+    "Server": "Microsoft-IIS/10.0",
+    "X-Content-Type-Options": "nosniff",
+    "Set-Cookie": "AGS_ROLES=\"419jqfa+uOZgYod4xPOQ8Q==\"; Version=1; Max-Age=60; Expires=Wed, 19 Aug 2026 16:48:06 GMT; Path=/arcgis/rest; Secure; HttpOnly, cookiesession1=678A3E489321C820E29FB68EDE876E7A;Expires=Thu, 19 Aug 2027 16:47:06 GMT;Path=/;HttpOnly",
+    "Date": "Wed, 19 Aug 2026 16:47:05 GMT",
+    "Content-Length": "2658"
+  },
+  "saved": "data\\raw\\metadata\\https_serviciosgis.catastrobogota.gov.co_arcgis_rest_services_ordenamientoterritorial_estratificacion_MapServer_f_pjson.json"
+}
