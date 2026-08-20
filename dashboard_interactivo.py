@@ -12,7 +12,10 @@ VARIABLES = {
     "temperatura_media_c": "Temperatura media (°C)",
     "pm25_media": "PM2.5 (µg/m³)",
     "poblacion": "Población",
+    "densidad_poblacional": "Densidad poblacional (hab/km²)",
     "densidad_arbolado_media": "Densidad de arbolado",
+    "estrato_medio": "Estrato socioeconómico medio",
+    "proporcion_estrato_1_2": "Proporción de estratos 1–2",
 }
 COMMON_COLOR_SCALE = "RdYlBu_r"
 
@@ -44,9 +47,12 @@ def load_dashboard_data():
 
 def build_corr_table(df: pd.DataFrame) -> pd.DataFrame:
     cols = [
+        "densidad_arbolado_media",
+        "vulnerabilidad_socioeconomica",
+        "estrato_medio",
         "temperatura_media_c",
         "pm25_media",
-        "poblacion",
+        "densidad_poblacional",
     ]
     corr = df[cols].corr(method="pearson").round(3)
     return corr
@@ -57,6 +63,8 @@ st.title("Dashboard interactivo — Bogotá D.C. por UPL")
 st.caption("Comparación territorial por año, con UPL delimitadas y hover con datos para cada variable.")
 
 map_df = load_dashboard_data()
+model_path = ROOT / "data" / "processed" / "modelo_arbolado.csv"
+model_results = pd.read_csv(model_path) if model_path.exists() else pd.DataFrame()
 
 with st.sidebar:
     st.header("Filtros")
@@ -104,7 +112,10 @@ fig = px.choropleth_mapbox(
         "temperatura_media_c": True,
         "pm25_media": True,
         "poblacion": True,
+        "densidad_poblacional": True,
         "densidad_arbolado_media": True,
+        "estrato_medio": True,
+        "proporcion_estrato_1_2": True,
         selected_var: True,
     },
     zoom=10,
@@ -135,10 +146,10 @@ left_col, right_col = st.columns(2)
 with left_col:
     st.subheader("Top UPL por variable")
     top = (
-        filtered[["upl", selected_var, "anio"]]
+        filtered[["upl", "nombre_upl", selected_var, "anio"]]
         .sort_values(selected_var, ascending=False)
         .head(10)
-        .rename(columns={selected_var: VARIABLES[selected_var], "upl": "UPL", "anio": "Año"})
+        .rename(columns={selected_var: VARIABLES[selected_var], "upl": "UPL", "nombre_upl": "Nombre UPL", "anio": "Año"})
     )
     st.dataframe(top, use_container_width=True)
 
@@ -148,15 +159,22 @@ with right_col:
     st.dataframe(corr, use_container_width=True)
 
 st.subheader("Datos completos por UPL")
-show_df = filtered[["upl", "anio", "temperatura_media_c", "pm25_media", "poblacion", "densidad_arbolado_media"]].sort_values("upl").reset_index(drop=True)
+show_df = filtered[["upl", "nombre_upl", "anio", "temperatura_media_c", "pm25_media", "poblacion", "densidad_poblacional", "densidad_arbolado_media", "estrato_medio", "proporcion_estrato_1_2"]].sort_values("upl").reset_index(drop=True)
+show_df = show_df.rename(columns={"upl": "UPL", "nombre_upl": "Nombre UPL", "anio": "Año"})
 st.dataframe(show_df, use_container_width=True)
+
+st.subheader("Modelo descriptivo de densidad de arbolado")
+if not model_results.empty:
+    st.dataframe(model_results.rename(columns={"termino": "Término", "coeficiente_estandarizado": "Coeficiente estandarizado", "r2": "R²", "n": "n"}), use_container_width=True)
+    st.caption("Modelo OLS estandarizado: densidad de arbolado ~ vulnerabilidad socioeconómica + PM2.5 + temperatura + densidad poblacional. Los coeficientes describen asociación territorial, no causalidad.")
 
 st.markdown(
     """
     ### Cómo interpretarlo
     - Los colores siguen la misma lógica en todas las variables: rojo = valor alto, azul = valor bajo.
     - Si una UPL aparece roja en temperatura y también roja en PM2.5, es una zona con mayor exposición combinada.
-    - Si una UPL es roja en temperatura pero no en población, la cifra sugiere un patrón territorial más que una relación mecánica por densidad poblacional.
+    - Un estrato medio menor y una proporción mayor de estratos 1–2 representan mayor vulnerabilidad socioeconómica en este análisis descriptivo.
+    - La densidad poblacional se calcula como población dividida por el área de la UPL en km².
     - La visualización permite comparar territorialmente los patrones sin afirmar causalidad.
     """
 )
@@ -164,6 +182,6 @@ st.markdown(
 st.markdown(
     """
     ### Conclusión
-    El mapa interactivo muestra que las UPL con mayor exposición térmica y ambiental no necesariamente coinciden con las de mayor población, pero sí permiten identificar zonas donde convergen calor, contaminación y presión territorial. La comparación por UPL y año confirma la presencia de hotspots urbanos y permite priorizar áreas para diagnóstico y gestión institucional con una lectura espacial y descriptiva, no causal.
+    El modelo descriptivo estandarizado (n=64; R²=0.131) presenta asociaciones negativas entre densidad de arbolado y vulnerabilidad socioeconómica (coeficiente=-0.246) y PM2.5 (coeficiente=-0.239), mientras que temperatura (0.167) y densidad poblacional (0.383) presentan asociaciones positivas en esta base. Estos resultados son débiles en capacidad explicativa y no prueban causalidad: sirven para priorizar la revisión espacial de UPL donde coinciden exposición ambiental, presión demográfica y menor cobertura arbórea observada.
     """
 )

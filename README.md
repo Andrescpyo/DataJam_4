@@ -1,9 +1,9 @@
-# DataJam_4 — Diagnóstico espacial de calor, población y calidad del aire en Bogotá D.C.
+# DataJam_4 — Vulnerabilidad, calor, contaminación y arbolado urbano en Bogotá D.C.
 
 ## Objetivo del análisis
-Este proyecto construye un análisis reproducible para estudiar la relación espacial entre exposición al calor urbano, población y contaminación atmosférica en Bogotá D.C., con la Unidad de Planeamiento Local (UPL) como unidad territorial de referencia. La lectura se mantiene descriptiva y territorial: se prioriza la identificación de patrones, asociaciones y hotspots, sin afirmar causalidad.
+Este proyecto construye un análisis reproducible para estudiar la relación espacial entre vulnerabilidad socioeconómica, exposición al calor urbano, población, contaminación atmosférica y densidad de arbolado en Bogotá D.C., con la Unidad de Planeamiento Local (UPL) como unidad territorial de referencia. La lectura se mantiene descriptiva y territorial: se prioriza la identificación de patrones y asociaciones, sin afirmar causalidad.
 
-La pregunta guía es: ¿qué UPL exhiben mayor exposición combinada a calor y contaminación y cómo se relacionan con la presión demográfica y la estructura urbana?
+La hipótesis de trabajo es: **las UPL con mayor vulnerabilidad socioeconómica y/o mayor exposición a la contaminación tienen una menor cobertura de arbolado urbano**. La temperatura y la densidad poblacional se incorporan como condiciones ambientales y de presión urbana complementarias.
 
 ## Fuentes de datos integradas
 Se usaron fuentes públicas oficiales y documentadas, alineadas con la lógica de análisis espacial:
@@ -36,18 +36,28 @@ Se usaron fuentes públicas oficiales y documentadas, alineadas con la lógica d
 
 5. Densidad de arbolado urbano
    - Entidad: Jardín Botánico de Bogotá
-   - Fuente: servicio geoespacial institucional
-   - Formato: raster
-   - Observación: la capa disponible en este entorno no fue legible ni georreferenciable de forma confiable, por lo que se registró como dato faltante y no se inventó información.
+   - Fuente: servicio institucional ArcGIS del Jardín Botánico de Bogotá
+   - Formato: servicio de identificación por punto (`identify`) sobre la capa raster institucional
+   - Observación: se consultaron valores oficiales del servicio para puntos representativos por UPL y se promediaron para cada unidad territorial; no se inventaron valores.
+
+6. Estratificación socioeconómica por manzanas
+   - Entidad: Catastro Distrital
+   - Fuente: servicio ArcGIS de estratificación
+   - Formato: polígonos de manzana descargados como GeoJSON en data/raw/manzanas_estrato.geojson
+   - Variables: ESTRATO, código de manzana
 
 ## Metodología
 - Se definió la UPL como unidad base del análisis.
 - Se estandarizaron identificadores territoriales para coincidir entre geometría y tablas tabulares.
 - La población se agrego por UPL y año.
 - PM2.5 y temperatura se agregaron a UPL mediante promedios ponderados por área de intersección, evitando aproximaciones por centroides.
+- La estratificación se cruzó espacialmente con las UPL. Para cada estrato se sumó el área de intersección de sus manzanas; el estrato medio es la media ponderada por esas áreas y también se calcula la proporción de área en estratos 1–2.
+- La vulnerabilidad socioeconómica se usa como proxy descriptivo: `-estrato_medio`, de modo que valores mayores representan menor estrato medio. No equivale a una medición integral de vulnerabilidad.
+- La densidad poblacional es población / área de la UPL en km².
 - Se validaron los años 2023 y 2024.
 - Se construyó la tabla final por UPL y año en data/processed/df_final.csv.
-- La densidad de arbolado se documentó como variable no disponible en la fuente efectiva utilizada, sin ocultar la limitación.
+- Se ajustó un modelo OLS estandarizado con densidad de arbolado como respuesta y vulnerabilidad, PM2.5, temperatura y densidad poblacional como predictores. Sus resultados quedan en data/processed/modelo_arbolado.csv.
+- La densidad de arbolado se incorporó como variable territorial derivada de consultas reales al servicio oficial del Jardín Botánico, con una validación explícita de la capa y sus limitaciones.
 
 ## Reproducibilidad
 ### 1. Crear entorno
@@ -88,6 +98,7 @@ streamlit run dashboard_interactivo.py
 
 ## Outputs principales
 - Tabla analítica final: data/processed/df_final.csv
+- Resultado del modelo descriptivo: data/processed/modelo_arbolado.csv
 - Notebook de análisis: notebooks/analisis_bogota.ipynb
 - Documento técnico de integración: docs/nota_tecnica_integracion_datos_publicos.md
 - Dashboard final: dashboard_interactivo.py
@@ -126,7 +137,9 @@ El proyecto entrega una base reproducible y una visualización interactiva final
 - hover con valores por bloque territorial,
 - tabla comparativa de variables,
 - correlación entre temperatura, PM2.5 y población,
+- estrato medio, proporción de estratos 1–2 y vulnerabilidad socioeconómica proxy,
+- tabla completa con código y nombre de cada UPL,
 - interpretación metodológica explícita.
 
 ## Nota metodológica
-La medición de densidad de arbolado se mantiene como variable no validada en esta entrega porque la capa raster oficial disponible en el entorno no podía ser leída correctamente. Por ello, la visualización no fabrica valores para esa dimensión; se documenta la ausencia y se asume el límite metodológico de manera transparente.
+La densidad de arbolado se estimó a partir de valores oficiales recuperados por `identify` sobre la capa institucional del Jardín Botánico de Bogotá, usando seis puntos candidatos dentro de cada UPL (centroide, punto representativo y vértices contenidos) y promediando únicamente los valores válidos devueltos por el servicio. La estratificación se resume mediante una media ponderada por el área de intersección entre manzanas y UPL. El modelo obtenido con los datos actuales tiene n=64 y R²=0.131: los coeficientes estandarizados son -0.246 para vulnerabilidad socioeconómica, -0.239 para PM2.5, 0.167 para temperatura y 0.383 para densidad poblacional. Estos resultados apoyan una lectura de asociación débil y exploratoria, no una conclusión causal.

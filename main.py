@@ -26,8 +26,6 @@ def main() -> None:
         "--server.port",
         str(port),
     ]
-
-    print(f"Iniciando dashboard interactivo en http://localhost:{port}")
     subprocess.run(cmd, cwd=root)
 
 
