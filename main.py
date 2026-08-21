@@ -1,14 +1,7 @@
 import csv
-import socket
 import subprocess
 import sys
 from pathlib import Path
-
-
-def get_free_port() -> int:
-    with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as sock:
-        sock.bind(("127.0.0.1", 0))
-        return int(sock.getsockname()[1])
 
 
 def _has_required_columns(csv_path: Path, required_columns: set[str]) -> bool:
@@ -51,29 +44,16 @@ def ensure_processed_data(root: Path) -> None:
         return
 
     analysis_script = root / "src" / "analisis_bogota.py"
-    cmd = [sys.executable, str(analysis_script)]
-    subprocess.run(cmd, cwd=root, check=True)
+    subprocess.run([sys.executable, str(analysis_script)], cwd=root, check=True)
 
 
 def main() -> None:
     root = Path(__file__).resolve().parent
-    app_path = root / "dashboard_interactivo.py"
-    port = get_free_port()
-
     ensure_processed_data(root)
 
-    cmd = [
-        sys.executable,
-        "-m",
-        "streamlit",
-        "run",
-        str(app_path),
-        "--server.headless",
-        "true",
-        "--server.port",
-        str(port),
-    ]
-    subprocess.run(cmd, cwd=root, check=True)
+    from dashboard_interactivo import main as dashboard_main
+
+    dashboard_main()
 
 
 if __name__ == "__main__":
