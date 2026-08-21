@@ -1,1 +1,0 @@
-https://mapas.ambientebogota.gov.co/server/rest/services/Calidad_aire
