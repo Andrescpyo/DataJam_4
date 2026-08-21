@@ -3,6 +3,8 @@ import subprocess
 import sys
 from pathlib import Path
 
+from streamlit.runtime import exists as streamlit_runtime_exists
+
 
 def _has_required_columns(csv_path: Path, required_columns: set[str]) -> bool:
     if not csv_path.exists() or csv_path.stat().st_size == 0:
@@ -50,6 +52,14 @@ def ensure_processed_data(root: Path) -> None:
 def main() -> None:
     root = Path(__file__).resolve().parent
     ensure_processed_data(root)
+
+    if not streamlit_runtime_exists():
+        subprocess.run(
+            [sys.executable, "-m", "streamlit", "run", str(root / "dashboard_interactivo.py")],
+            cwd=root,
+            check=True,
+        )
+        return
 
     from dashboard_interactivo import main as dashboard_main
 
