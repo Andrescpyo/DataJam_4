@@ -1,5 +1,11 @@
 # DataJam_4 — Vulnerabilidad, calor, contaminación y arbolado urbano en Bogotá D.C.
 
+
+## Dashboard en línea
+Puedes acceder al dashboard publicado en:
+
+https://datajam4-bogota.streamlit.app
+
 ## Objetivo del análisis
 Este proyecto construye un análisis reproducible para estudiar la relación espacial entre vulnerabilidad socioeconómica, exposición al calor urbano, población, contaminación atmosférica y densidad de arbolado en Bogotá D.C., con la Unidad de Planeamiento Local (UPL) como unidad territorial de referencia. La lectura se mantiene descriptiva y territorial: se prioriza la identificación de patrones y asociaciones, sin afirmar causalidad.
 
@@ -80,17 +86,14 @@ source .venv/bin/activate
 pip install -r requirements.txt
 ```
 
-### 4. Procesar la base final (opcional)
-```bash
-python src/analisis_bogota.py
-```
-Este paso es opcional cuando usas `python main.py`, porque `main.py` verifica si `data/processed/df_final.csv` y `data/processed/modelo_arbolado.csv` ya existen y tienen estructura válida. Si faltan o están incompletos, ejecuta automáticamente el procesamiento antes de abrir la app.
-
-### 5. Lanzar la aplicación principal
+### 4. Lanzar la aplicación principal
 Este repositorio tiene como entrada principal el archivo [main.py](main.py), que inicia el dashboard interactivo de Bogotá por UPL:
 ```bash
 python main.py
 ```
+
+### 5. Abrir el enlace local en el navegador
+Cuando ejecutes `python main.py`, en la consola aparecerá un enlace local (por ejemplo, `http://localhost:8501`). Abre ese enlace para visualizar el dashboard en tu equipo.
 
 ## Outputs principales
 - Tabla analítica final: data/processed/df_final.csv
@@ -99,32 +102,6 @@ python main.py
 - Documento técnico de integración: docs/nota_tecnica_integracion_datos_publicos.md
 - Dashboard final: dashboard_interactivo.py
 - Punto de entrada principal: main.py
-
-## Estructura del repositorio
-```text
-DataJam_4/
-├── data/
-│   ├── raw/
-│   └── processed/
-├── docs/
-│   ├── formulario_caracterizacion.md
-│   └── nota_tecnica_integracion_datos_publicos.md
-├── notebooks/
-│   └── analisis_bogota.ipynb
-├── qgis/
-│   ├── Densidad arbolado urbano.qgz
-│   └── ...
-├── src/
-│   ├── analisis_bogota.py
-│   ├── fetch_metadata.py
-│   ├── funciones.py
-│   └── __init__.py
-├── dashboard_interactivo.py
-├── README.md
-├── requirements.txt
-├── LICENSE
-└── .gitignore
-```
 
 ## Producto final
 El proyecto entrega una base reproducible y una visualización interactiva final basada en UPL con:
@@ -142,5 +119,7 @@ El proyecto entrega una base reproducible y una visualización interactiva final
 - Indicadores medibles y comparables en el tiempo: se emplean variables objetivas para 2023 y 2024 (temperatura media, PM2.5, población, densidad poblacional, estrato medio y proporción de estratos 1–2), manteniendo definiciones consistentes entre periodos.
 - Comparabilidad temporal: la estructura final de la tabla analítica preserva el mismo esquema de variables por año para facilitar seguimiento, monitoreo y análisis de tendencias.
 
-## Nota metodológica
-La densidad de arbolado se estimó a partir de valores oficiales recuperados por `identify` sobre la capa institucional del Jardín Botánico de Bogotá, usando seis puntos candidatos dentro de cada UPL (centroide, punto representativo y vértices contenidos) y promediando únicamente los valores válidos devueltos por el servicio. La estratificación se resume mediante una media ponderada por el área de intersección entre manzanas y UPL. El modelo obtenido con los datos actuales tiene n=64 y R²=0.131: los coeficientes estandarizados son -0.246 para vulnerabilidad socioeconómica, -0.239 para PM2.5, 0.167 para temperatura y 0.383 para densidad poblacional. Estos resultados apoyan una lectura de asociación débil y exploratoria, no una conclusión causal.
+## Autores
+- Juan Esteban Bedoya Lautero (jebedoyal@udistrital.edu.co) 
+- Andrés Cerdas Padilla (acerdasp@udistrital.edu.co)
+- Fabian Yesith Aguilar Jímenez (fyaguilarj@udistrital.edu.co)
